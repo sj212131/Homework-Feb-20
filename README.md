@@ -60,7 +60,7 @@ for future reference
 You are required to submit BOTH of the following for review:
 
 * The URL of the deployed application.
-        https://sj212131.github.io/Homework-Feb-13/
+        https://sj212131.github.io/Homework-Feb-20/
         
 * The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
-        https://github.com/sj212131/Homework-Feb-13
+        https://github.com/sj212131/Homework-Feb-20
