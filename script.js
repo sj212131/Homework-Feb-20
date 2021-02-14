@@ -13,53 +13,65 @@ var Symbel_chart = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", 
  
 // Write password to the #password input
 var writePassword = function(){
-  
-  let passwordrange = window.prompt('Please select the range of your password (1 ~ 128)');
+
+  var passwordrange = window.prompt('Please select the range of your password (1 ~ 128)');
   if (1 < passwordrange && passwordrange < 128) {
-    pwlenth = passwordrange
-    console.log('password lenth confirmed')
+    
+    console.log('password lenth confirmed');
   } else {
     window.alert ('invaild input please re-enter your range');
+    return;
   }
 
   // lowercase
-  let includelowercase = window.confirm('Would you like to have lowercase in your password ?');
+  var includelowercase = window.confirm('Would you like to have lowercase in your password ?');
   if (includelowercase) {
-    userselection.push(lowercase_chart)
-    console.log('lowercase added')
+    userselection.concat(lowercase_chart);
+    console.log(userselection);
+    console.log('lowercase added');
+    
   } 
 
   // Uppercase
-  let includeuppercase = window.confirm('Would you like to have uppercase in your password ?');
+  var includeuppercase = window.confirm('Would you like to have uppercase in your password ?');
   if (includeuppercase) {
-    userselection.push(Uppercase_chart)
-    console.log('Uppercase added')
+    userselection.push(Uppercase_chart);
+    console.log(userselection);
+    console.log('Uppercase added');
   } 
 
 
   // Number
-  let includeNumber = window.confirm ('Would you like to have number in your password ?');
+  var includeNumber = window.confirm ('Would you like to have number in your password ?');
 
   if (includeNumber) {
-    userselection.push(Number_chart)
-    console.log('Number added')
+    userselection.push(Number_chart);
+    console.log(userselection);
+    console.log('Number added');
   } 
 
   // Symbel
-  let includeSymbel = window.confirm ('Would you like to have symbel in your password ?');
+  var includeSymbel = window.confirm ('Would you like to have symbel in your password ?');
 
   if (includeSymbel) {
-    userselection.push(Symbel_chart)
-    console.log('Symbel added')
+    userselection.push(Symbel_chart);
+    console.log(userselection);
+    console.log('Symbel added');
   } 
 
-  console.log(userselection)
+  userselection.length = passwordrange;
+  console.log(userselection);
 
-  var password = generatePassword();
+  userselection.concat();
+  console.log(userselection);
+
+  // generatePassword();
+  var password =  userselection[Math.floor(Math.random() * userselection.length)];
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
+  return;
 }
 
 // Add event listener to generate button
