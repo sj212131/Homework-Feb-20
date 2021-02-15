@@ -18,7 +18,7 @@ function writePassword() {
   // Userselections
     // Range
     var passwordrange = parseInt(window.prompt('Please select the range of your password (1 ~ 128)'));
-    if (1 <= passwordrange && passwordrange <= 128) {
+    if (8 <= passwordrange && passwordrange <= 128) {
       console.log('password lenth confirmed');
     } else {
       window.alert ('invalid data, please resubmit.');
