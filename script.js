@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
 
-  // User selection
+  // User selection created
   var userselection = []
 
   // Chart
@@ -21,7 +21,7 @@ function writePassword() {
     if (1 <= passwordrange && passwordrange <= 128) {
       console.log('password lenth confirmed');
     } else {
-      window.alert ('invaild input please re-enter your range');
+      window.alert ('invalid data, please resubmit.');
       return;
     }
     
@@ -40,7 +40,6 @@ function writePassword() {
       console.log(userselection);
       console.log('Uppercase added');
     } 
-
 
     // Number
     var includeNumber = window.confirm ('Would you like to have number in your password ?');
