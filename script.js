@@ -54,14 +54,18 @@ function writePassword() {
     if (includeSymbel) {
       userselection.push(...Symbel_chart);
       console.log(userselection);
+      // line 56 console.log should have all the requests that the user selected. 
       console.log('Symbel added');
     } 
     
     //Generate Password
     var password = [] ;
     for (var i = 0; i < passwordrange; i++ ){
+      // base on the userselection, run math.random 
       password.push( userselection[Math.floor(Math.random() * userselection.length)]);
     }
+
+    // Remove the comma 
     console.log(password.join(''))
 
     //Display
