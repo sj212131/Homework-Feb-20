@@ -8,16 +8,16 @@ function writePassword() {
   // User selection created
   var userselection = []
 
-  // Chart
+  // Data base Chart
   var lowercase_chart = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var Uppercase_chart = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   var Number_chart = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   var Symbel_chart = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "?", "=", "/", "|", "<", ">" ]
 
   
-  // Userselections
+  // User selections
     // Range
-    var passwordrange = parseInt(window.prompt('Please select the range of your password (1 ~ 128)'));
+    var passwordrange = parseInt(window.prompt('Please select the range of your password (8 ~ 128)'));
     if (8 <= passwordrange && passwordrange <= 128) {
       console.log('password lenth confirmed');
     } else {
